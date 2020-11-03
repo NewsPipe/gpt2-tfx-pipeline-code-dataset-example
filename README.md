@@ -4,7 +4,7 @@ This repository contains the checkpoints for a GPT-2 trained on Python code. GPT
 
 ## Getting Started
 
-**Clone Repository
+**Clone Repository**
 ```
 git clone https://github.com/pqbsbk/code-gpt2-demo.git
 cd code-gpt2-demo
