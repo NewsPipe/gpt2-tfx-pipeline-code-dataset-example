@@ -1,7 +1,7 @@
 import os
 
 from tfx.orchestration.beam.beam_dag_runner import BeamDagRunner
-from tfx_gpt2.templates.local_finetune_large_data_pipeline.py import create_pipeline
+from tfx_gpt2.templates.local_finetune_large_data_pipeline import create_pipeline
 
 model_name = "117M"
 
@@ -37,5 +37,6 @@ pipeline = create_pipeline(pipeline_name=os.path.basename(__file__),
                            text_token_size=text_token_size,
                            mlflow_tracking_url=mlflow_tracking_url,
                            train_config=train_config,
-                           enable_cache=True)
+                           enable_cache=False,
+                           encoding="ISO-8859-1")
 BeamDagRunner().run(pipeline)
